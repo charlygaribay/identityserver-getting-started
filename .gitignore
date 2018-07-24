@@ -12,3 +12,6 @@
 
 # .NET Core
 **/Properties/launchSettings.json
+
+# NPM Packages
+**/node_modules/
