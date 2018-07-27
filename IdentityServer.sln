@@ -12,7 +12,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcClient", "MvcClient\MvcC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerWithAspNetIdentity", "IdentityServerWithAspNetIdentity\IdentityServerWithAspNetIdentity.csproj", "{BA2901D7-A8B4-4B7A-95B3-8F5A6F4BCED4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavascriptClient", "JavascriptClient\JavascriptClient.csproj", "{9FA58D2D-CB1F-41BE-971C-54950DD767B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JavascriptClient", "JavascriptClient\JavascriptClient.csproj", "{9FA58D2D-CB1F-41BE-971C-54950DD767B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QuickStarts", "QuickStarts", "{0C096FFD-EB4E-46F7-AC20-7EA966B1EE35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7462296B-FABC-4817-8236-F017FD2C5645} = {0C096FFD-EB4E-46F7-AC20-7EA966B1EE35}
+		{0365FACC-132F-4050-97E0-B774D8E2E3B0} = {0C096FFD-EB4E-46F7-AC20-7EA966B1EE35}
+		{C2840253-97CC-47BF-8FAE-161CE6837DEC} = {0C096FFD-EB4E-46F7-AC20-7EA966B1EE35}
+		{DD490D56-779A-4D8C-B92C-2117D9204C24} = {0C096FFD-EB4E-46F7-AC20-7EA966B1EE35}
+		{BA2901D7-A8B4-4B7A-95B3-8F5A6F4BCED4} = {0C096FFD-EB4E-46F7-AC20-7EA966B1EE35}
+		{9FA58D2D-CB1F-41BE-971C-54950DD767B3} = {0C096FFD-EB4E-46F7-AC20-7EA966B1EE35}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0B5CC794-0DFE-40DC-827D-173AEC566476}
