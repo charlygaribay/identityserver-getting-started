@@ -11,8 +11,8 @@ using System;
 namespace Identity.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180727072433_FirstAndLastName")]
-    partial class FirstAndLastName
+    [Migration("20180728201903_GivenNameAndSurname")]
+    partial class GivenNameAndSurname
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,9 +36,8 @@ namespace Identity.Data.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
+                    b.Property<string>("GivenName")
+                        .HasMaxLength(256);
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -57,6 +56,9 @@ namespace Identity.Data.Migrations
                     b.Property<bool>("PhoneNumberConfirmed");
 
                     b.Property<string>("SecurityStamp");
+
+                    b.Property<string>("Surname")
+                        .HasMaxLength(256);
 
                     b.Property<bool>("TwoFactorEnabled");
 

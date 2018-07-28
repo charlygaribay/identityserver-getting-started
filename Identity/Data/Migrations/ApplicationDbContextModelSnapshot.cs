@@ -35,9 +35,8 @@ namespace Identity.Data.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
+                    b.Property<string>("GivenName")
+                        .HasMaxLength(256);
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -56,6 +55,9 @@ namespace Identity.Data.Migrations
                     b.Property<bool>("PhoneNumberConfirmed");
 
                     b.Property<string>("SecurityStamp");
+
+                    b.Property<string>("Surname")
+                        .HasMaxLength(256);
 
                     b.Property<bool>("TwoFactorEnabled");
 

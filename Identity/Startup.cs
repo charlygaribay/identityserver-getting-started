@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Identity.Data;
 using Identity.Models;
 using Identity.Services;
+using IdentityServer4;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Identity
 {
@@ -46,6 +48,19 @@ namespace Identity
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryClients(Config.GetClients())
                 .AddAspNetIdentity<ApplicationUser>();
+
+            services
+                .AddAuthentication()
+                .AddGoogle("Google", options =>
+                {
+                    options.ClientId = "28636849875-rcu1elrp0nb8mjon7vq7pnp39do4smv5.apps.googleusercontent.com";
+                    options.ClientSecret = "na8bpkdhFWzkw8VR4WOvZtl4";
+                })
+                .AddFacebook("Facebook", options => 
+                {
+                    options.AppId = "2133169246955046";
+                    options.AppSecret = "4afd7e8e6af1e44147a8638622f2d638";
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

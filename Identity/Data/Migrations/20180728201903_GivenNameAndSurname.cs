@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Identity.Data.Migrations
 {
-    public partial class FirstAndLastName : Migration
+    public partial class GivenNameAndSurname : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -21,13 +21,15 @@ namespace Identity.Data.Migrations
                 table: "AspNetRoles");
 
             migrationBuilder.AddColumn<string>(
-                name: "FirstName",
+                name: "GivenName",
                 table: "AspNetUsers",
+                maxLength: 256,
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "LastName",
+                name: "Surname",
                 table: "AspNetUsers",
+                maxLength: 256,
                 nullable: true);
 
             migrationBuilder.CreateIndex(
@@ -68,11 +70,11 @@ namespace Identity.Data.Migrations
                 table: "AspNetRoles");
 
             migrationBuilder.DropColumn(
-                name: "FirstName",
+                name: "GivenName",
                 table: "AspNetUsers");
 
             migrationBuilder.DropColumn(
-                name: "LastName",
+                name: "Surname",
                 table: "AspNetUsers");
 
             migrationBuilder.CreateIndex(
