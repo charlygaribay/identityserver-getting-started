@@ -60,6 +60,12 @@ namespace Identity
                 {
                     options.AppId = "2133169246955046";
                     options.AppSecret = "4afd7e8e6af1e44147a8638622f2d638";
+                })
+                .AddJwtBearer(jwt =>
+                {
+                    jwt.Authority = "http://localhost:5000";
+                    jwt.RequireHttpsMetadata = false;
+                    jwt.Audience = "api1";
                 });
         }
 
