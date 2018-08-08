@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Identity.ApiModels;
+﻿using Identity.ApiModels;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Identity.Controllers
 {
     [Produces("application/json")]
     [Route("api/Events")]
-    [Authorize]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public class EventsController : Controller
     {
         public async Task<ActionResult> GetEvents()

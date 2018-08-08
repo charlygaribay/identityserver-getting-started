@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Identity.ApiModels
+﻿namespace Identity.ApiModels
 {
     public class TaskApiModel
     {
